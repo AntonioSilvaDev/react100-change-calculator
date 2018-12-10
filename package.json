@@ -5,6 +5,7 @@
   "main": "server/index.js",
   "scripts": {
     "build": "webpack --mode development",
+    "dev": "concurrently \"webpack -w\" \"nodemon server/index.js\"",
     "start": "webpack --mode development && node server/index.js",
     "lint": "eslint .",
     "test": "npm run build && mocha test/.setup.js test/*.spec.js --exit"
