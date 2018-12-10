@@ -8,7 +8,6 @@ class App extends Component {
       amountDue: "",
       amountReceived: "",
       output: "0"
-
     }
 
   this.changeHandler = this.changeHandler.bind(this);
@@ -23,7 +22,6 @@ class App extends Component {
       });
     }
     
-
     clickHandler(amountDue, amountReceived){
       amountDue = this.state.amountDue;
       amountReceived = this.state.amountReceived;
@@ -52,19 +50,7 @@ class App extends Component {
       remainder -= (nickels * 5);
 
       let pennies = Math.floor(remainder);
-      
-      
-      console.log(twenties);
-      console.log(tens);
-      console.log(fives);
-      console.log(ones);
-      console.log(quarters);
-      console.log(dimes);
-      console.log(nickels);
-      console.log(pennies);
-      console.log(remainder);
-      console.log(change);
-
+    
       this.setState({
         twenties: Number(twenties),
         tens: Number(tens),
@@ -100,6 +86,7 @@ class App extends Component {
       </div>
   
       <div className="row">
+
         <div className="col-sm-4">
           <div className="panel panel-default">
             <div className="panel-heading">Enter Information</div>
@@ -129,30 +116,30 @@ class App extends Component {
 
               {alert}
 
-              <div className="grid-columns">
-              
-                <div className="col-md-3">
+              <div className="row grid-column">
+
+                <div className="col-sm-3">
                   <div className="text-center well">
                     <h4>Twenties</h4>
-                    <p className="change" name="twenties" onChange={this.changeHandler}>{this.state.twenties}</p>
+                    <div className="change" name="twenties" onChange={this.changeHandler}>{this.state.twenties}</div>
                   </div>
                 </div>
 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Tens</h4>
                     <div className="change" name="tens" onChange={this.changeHandler}>{this.state.tens}</div>
                   </div>
                 </div> 
                 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Fives</h4>
                     <div className="change" name="fives" onChange={this.changeHandler}>{this.state.fives}</div>
                     </div>
                 </div>
 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Ones</h4>
                     <div className="change" name="ones" onChange={this.changeHandler}>{this.state.ones}</div>
@@ -161,44 +148,43 @@ class App extends Component {
 
               </div>
 
-              <div className="grid-columns">
+              
+              <div className="row grid-column">
 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Quarters</h4>
                     <div className="change" name="quarters" onChange={this.changeHandler}>{this.state.quarters}</div>
                   </div>
                 </div>
 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Dimes</h4>
                     <div className="change" name="dimes" onChange={this.changeHandler}>{this.state.dimes}</div>
                   </div>
                 </div>
 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Nickels</h4>
                     <div className="change" name="nickels" onChange={this.changeHandler}>{this.state.nickels}</div>
                   </div>
                 </div>
 
-                <div className="col-md-3">  
+                <div className="col-sm-3">  
                   <div className="text-center well">
                     <h4>Pennies</h4>
                     <div className="change" name="pennies" onChange={this.changeHandler}>{this.state.pennies}</div>
                   </div>
                 </div>
 
-              </div>   
+            </div>    
             </div>
           </div>
         </div>
-
-    </div>
-    </div>
-      
+      </div>
+    </div> 
     )
   }
 }
